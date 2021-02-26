@@ -1,0 +1,8 @@
+Binome 69 : Projet SMT-LIB
+
+Nous avons pris l'initiative de modifier légèrement le main de apprentissage.ml afin de créer un fichier de sortie "output.smtlib", en plus de l'affichage sur la sortie standard pour faciliter la récupération du résultat.
+
+Afin d'obtenir de meilleurs performances (par rapport à l'opérateur '@'), nous avons codé notre propre fonction de concaténation add_list, qui est récursive terminale et générique.
+Nous avons laissé la fonction compare_length dans le code, bien qu'on ne l'utilise plus car le tri des mots par taille dans l'affichage du résultat n'était pas demandé.
+
+Il nous reste une interrogation : dans les fonctions prefixes_of_list et alphabet_from_list, nous utilisons List.sort_uniq afin d'enlever les possibles doublons. Cette dernière est basée sur un tri fusion (d'après la documentation) et est donc optimale par rapport à une fonction de filtrage sur liste non-triée que nous aurions écrite nous même. Est-ce fatisfaisant ?
